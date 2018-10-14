@@ -1,2 +1,0 @@
-# gulfeminfo
-kişisel site

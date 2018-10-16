@@ -1,1 +1,52 @@
-
+<html>
+<head>
+  <script>
+function gizle(){
+document.getElementById('kapalink').style.display="none";
+}
+var kontrol="kapali";
+function ac(){
+    var a=parseInt(document.getElementById('kutu').style.width);
+        var h=parseInt(document.getElementById('kutu').style.height);
+    if(kontrol=="kapali"){
+        a=a+50;
+                h=h+10; 
+                      document.getElementById('kutu').style.width=a;
+                      document.getElementById('kutu').style.height=h;
+                      if(a>200){
+                  document.getElementById('kutu').style.width=200;
+              kontrol="acik";
+                      document.getElementById('kapalink').style.display="";
+                      document.getElementById('aclink').style.display="none"
+exit();
+}
+                             }
+    else if(kontrol=="acik"){
+                 a=a-50;
+                 h=h-10;
+                      document.getElementById('kutu').style.width=a;
+                      document.getElementById('kutu').style.height=h;
+                      if(a<50){   
+                  document.getElementById('kutu').style.width=50;
+              kontrol="kapali";
+                      document.getElementById('kapalink').style.display="none";
+                      document.getElementById('aclink').style.display="";
+ exit();
+}
+        }   
+   var act=setTimeout("ac()",100);
+}
+</script>
+  <title>CV</title>
+  </head>
+  <body onload="gizle()">
+    <h1>Programlama Dilleri</h1>
+    <div id="kutu" style="position:absolute; width:50; height:50; background-color:abc; overflow:hidden;"><div id="aclink"><a href="#" onclick="ac()">aç</a></div><div id="kapalink"><a href="#" onclick="ac()">kapa</a></div><hr color=white size=1>
+    <h1>Programlama Dilleri</h1>
+      </div>
+    <h1>Konferanslar</h1>
+    <h1>İs Deneyimi</h1>
+    <h1>Sertifikalar</h1>
+    <h1>Makaleler</h1>
+  </body>
+</html>
